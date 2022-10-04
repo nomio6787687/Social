@@ -69,5 +69,27 @@ export const Posts = [
     like: 2,
     comment:1,
 },
-
+{
+    id: 3,
+    photo: "assets/post/3.jpeg",
+    date: "15 mins ago",
+    userId: 2,
+    like: 32,
+    comment:2,
+},{
+    id: 4,
+    photo: "assets/post/4.jpeg",
+    date: "15 mins ago",
+    userId: 4,
+    like: 2,
+    comment:1,
+},
+{
+    id: 5,
+    photo: "assets/post/5.jpeg",
+    date: "15 mins ago",
+    userId: 2,
+    like: 2,
+    comment:15,
+},
 ]

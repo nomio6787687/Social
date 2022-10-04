@@ -13,15 +13,16 @@ export default function Profile() {
         <div className="profileRight">
             <div className="profileRightTop">
                 <div className="profileCover">
-
                 <img 
                 className="profileCoverImg" 
-                src="assets/person/3.jpeg" 
-                alt="" />
+                src="assets/person/4.jpeg" 
+                alt="" 
+                />
                 <img 
                 className="profileUserImg" 
-                src="assets/person/7.jpeg" 
-                alt="" />
+                src="assets/person/8.jpeg" 
+                alt="" 
+                />
                 </div>
                 <div className="profileInfo">
                     <h4 className="profileInfoName">Safak Kocaoglu</h4>
