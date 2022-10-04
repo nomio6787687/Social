@@ -2,7 +2,7 @@ import "./sidebar.css";
 import {
 RssFeed,
 Chat,
-PlayCircleFilledWhite,
+PlayCircleFilledOutlined,
 Group,
 Bookmark,
 HelpOutline,
@@ -11,6 +11,7 @@ Event,
 School,
 } from "@mui/icons-material";
 import {Users} from "../../dummyData"
+import CloseFriend from '../closeFriend/CloseFriend'
 
 
 export default function Sidebar(){
@@ -27,7 +28,7 @@ export default function Sidebar(){
                        <span className="sidebarListItemText">Chats</span>
                     </li>
                     <li className="sidebarListItem">
-                       <PlayCircleFilledWhite className= "sidebarIcon"/>
+                       <PlayCircleFilledOutlined className= "sidebarIcon"/>
                        <span className="sidebarListItemText">Videos</span>
                     </li>
                     <li className="sidebarListItem">
