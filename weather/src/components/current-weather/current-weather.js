@@ -11,3 +11,4 @@ const CurrentWeather = () => {
         </div>
     )
 }
+export default CurrentWeather;
