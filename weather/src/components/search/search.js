@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
-import {GEO_API_URL,geaApiOptions} from '../../api';
+import {GEO_API_URL, geaApiOptions} from '../../api';
 
 const Search = () => {
 
@@ -16,8 +16,8 @@ const Search = () => {
             return{
                 options: response.data.map((city) =>{
                     return{
-                        value: '${city.latitude} ${city.longitude}',
-                        label: '${city.name}, ${city.countryCode}',
+                        value: `${city.latitude} ${city.longitude}`,
+                        label: `${city.name}, ${city.countryCode}`,
                     }
                 })
             }
