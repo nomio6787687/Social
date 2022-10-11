@@ -1,25 +1,29 @@
 import { 
     Accordion, 
-    AccordionItemHeading,
-    AccordionItem,
-    AccordionItemPanel,
+    AccordionItemHeading, 
+    AccordionItem, 
+    AccordionItemPanel, 
+    AccordionItemButton, 
 } from "react-accessible-accordion";
 
-const Forecast = ({data}) =>{
-    return 
+const Forecast = ({ data }) => {
+    return (
     <>
-       <label className="title">Daitly</label> 
-       <Accordion allowZeroExpanded>
-        {data.list.splice(0, 7).map((item, idx) => (
-            <AccordionItem key={idx}>
-                <AccordionItemHeading>
-                    
-                </AccordionItemHeading>
-            </AccordionItem>
-        ))}
-       </Accordion>
-
-    </>;
-}
+        <label className="title">Daitly</label>
+        <Accordion allowZeroExpanded>
+            {data.list.splice(0, 7).map((item, idx) => (
+                <AccordionItem key={idx}>
+                    <AccordionItemHeading>
+                        <AccordionItemButton>
+                            Hello
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel></AccordionItemPanel>
+                </AccordionItem>
+            ))}
+        </Accordion>
+    </>
+ );
+};
 
 export default Forecast;
