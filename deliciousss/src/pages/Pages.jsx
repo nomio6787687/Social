@@ -6,7 +6,7 @@ function Pages() {
         <div>
             <Home />
         </div>
-    )
+    );  
 }
 
 export default Pages;
