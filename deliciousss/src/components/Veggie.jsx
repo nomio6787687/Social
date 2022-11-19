@@ -17,7 +17,7 @@ function Veggie() {
         setVeggie(JSON.parse(check));
       }else{
         const api = await fetch(
-          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
         );
         const data = await api.json();
 
@@ -26,7 +26,8 @@ function Veggie() {
         console.log(data.recipes);
       }
     };
-    return (<div>
+    return (
+    <div>
     <Wrapper>
         <h3>Our Vegetarian Picks</h3>
         <Splide 
@@ -54,7 +55,6 @@ function Veggie() {
 </div>
  );
 }
-
 
 const Wrapper = style.div`
    margin: 4rem 0rem;
@@ -98,5 +98,6 @@ const Gradiend =style.div`
   width: 100%;
   haight: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-`;
+`; 
+
 export default Veggie;
