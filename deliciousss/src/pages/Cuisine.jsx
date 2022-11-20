@@ -20,16 +20,18 @@ function Cuisine() {
         console.log(params.type);
     },[params.type]);
 
-    return <Grid>
+    return (
+    <Grid>
         {cuisine.map((item) =>{
             return(
                 <Card key={item.id}>
                     <img src={item.image} alt="" />
                     <h4>{item.title}</h4>
                 </Card>
-            )
+            );
         })}
-    </Grid>;
+    </Grid>
+    );
 }
 
 const Grid = styled.div`
@@ -50,4 +52,5 @@ const Card = styled.div`
         padding: 1rem;
     }
 `;
+
 export default Cuisine;
