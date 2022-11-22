@@ -5,33 +5,50 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import "./home.css";
 import { useEffect, useState } from "react";
 import { sendRequest, urlLookup } from "../../settings/settings";
+import { Button, notification } from "antd";
 
 export default function Home() {
   const [datas, setDatas] = useState();
 
   useEffect(() => {
     const bodyChiglel = {
-      action: "aimagsum",
+      action: "chiglel",
     };
     sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
   }, []);
-
-  const DisplayData = 
-  datas &&
-  datas.data.map((gazar) => {
-    return (
-      <div key={gazar.chiglelname}>
-        <h5>
-          <button onClick={()=>console.log(gazar.chiglelname)}>456</button>
-        </h5>
-      </div>
-    )
-  })
+  const openNotification = (title, desc) => {
+    notification.open({
+      message: title,
+      description: desc,
+      onClick: () => {
+        console.log(desc + " Clicked!");
+      },
+    });
+  };
+  const DisplayData =
+    datas &&
+    datas.data.map((gazar) => {
+      return (
+        <div key={gazar.chiglelnum}>
+          <Button
+            type="primary"
+            onClick={() =>
+              openNotification(gazar.chigleldaraalal, gazar.chiglelname)
+            }
+          >
+            {gazar.chiglelname}
+          </Button>
+          <br />
+          <br />
+        </div>
+      );
+    });
   return (
     <>
-    <p>{DisplayData}</p>
+      {DisplayData}
+
       <p>{datas && JSON.stringify(datas)}</p>
-      <Topbar sumname={datas && datas.data[9].chiglelname} />
+      <Topbar />
       <div className="homeContainer">
         <Sidebar />
         <Feed />
