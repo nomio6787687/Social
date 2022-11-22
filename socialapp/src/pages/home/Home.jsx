@@ -16,10 +16,22 @@ export default function Home() {
     sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
   }, []);
 
+  const DisplayData = 
+  datas &&
+  datas.data.map((gazar) => {
+    return (
+      <div key={gazar.chiglelname}>
+        <h5>
+          <button onClick={()=>console.log(gazar.chiglelname)}>456</button>
+        </h5>
+      </div>
+    )
+  })
   return (
     <>
+    <p>{DisplayData}</p>
       <p>{datas && JSON.stringify(datas)}</p>
-      <Topbar sumname={datas && datas.data[9].sumduud[3]["sumname"]} />
+      <Topbar sumname={datas && datas.data[9].chiglelname} />
       <div className="homeContainer">
         <Sidebar />
         <Feed />
