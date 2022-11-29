@@ -1,8 +1,10 @@
 import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 
-export default function Topbar() {
+export default function Topbar(ilgeesen) {
   return (
+    <>
+    {JSON.stringify(ilgeesen)}
     <div className="topbarContainer">
       <div className="topbarLeft">
         <span className="logo">Lamasocial</span>
@@ -24,7 +26,7 @@ export default function Topbar() {
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
-            <span className="topbarIconBadge">1</span>
+            <span className="topbarIconBadge">{ilgeesen.data.friendRequest}</span>
           </div>
           <div className="topbarIconItem">
             <Chat />
@@ -38,5 +40,6 @@ export default function Topbar() {
         <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
       </div>
     </div>
+    </>
   );
 }
