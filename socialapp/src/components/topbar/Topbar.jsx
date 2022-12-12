@@ -26,7 +26,7 @@ export default function Topbar(ilgeesen) {
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
-            <span className="topbarIconBadge">{ilgeesen.data.friendRequest}</span>
+            <span className="topbarIconBadge"></span>
           </div>
           <div className="topbarIconItem">
             <Chat />
