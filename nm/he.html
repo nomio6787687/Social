@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tab_box">
+            <button class="tab_btn"> Personal Information</button>
+            <button class="tab_btn">Hobby</button>
+            <button class="tab_btn">Blogs</button>
+            <button class="tab_btn">Contact us</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content">
+                <div class="row">
+                    <input type="name" name="Fist name" 
+                        id="floatingFname" placeholder="First Name">
+                        <input type="name" name="last name" 
+                        id="floatingLname" placeholder="Last Name">
+                </div>
+
+                <div class="row1">
+                    <input type="email" name="email" 
+                    id="floatingEmail" placeholder="Email">
+                </div>
+                <div class="row2">
+                    <input type="tel" name="phone-number"  step="10"
+                        id="floatingNumber" placeholder="Number">
+                </div>
+                <div class="row3" >
+                    <label >Gender :</label>
+                        <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                </div>
+                <div class="row4">
+                    <label >Date : </label>
+                   <input id="date" name="date" type="date" /> 
+                </div>
+                <div class="row5">
+                    <input type="text" name="Address" 
+                        id="floatingAddress" placeholder="Address">
+                </div>
+                <div class="row6">
+                    <input type="city" name="city" 
+                        id="floatingCity" placeholder="City">           
+                </div>
+                <div class="row7">
+                    <input type="text" name="Address" 
+                        id="floatingAddress" placeholder=" Full Address">
+                </div>
+                <div class="row8">
+                    <div class="btn-group mr-2 " role="group" aria-label="First group">
+                        <button name="submit" type="submit">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="ro1">
+                    <textarea name="text"  cols="80" rows="18"></textarea>
+                </div>
+                <div class="ro2">
+                    <div class="btn-group mr-2 " role="group" aria-label="First group">
+                        <button name="submit" type="submit">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>Blogs</h2>
+                <p>gbbedcggbdcfcudgkw,dnsbcvxjf iukvmsdc
+                    cdgchkjmkclxs
+                </p>
+            </div>
+            <div class="content">
+                <h2>ontact us</h2>
+                <p>gbbedcggbdcfcudgkw,dnsbcvxjf iukvmsdc
+                    cdgchkjmkclxs
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs= document.querySelectorAll('.tab_btn');
+        const all_content= document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', (e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+
+                var line=document.querySelector('.line');
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+
+            all_content.forEach(content=>{content.classList.remove('active')});
+            all_content[index].classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>
